@@ -1,0 +1,1 @@
+module.exports = require("github:gamtiq/extend@0.1.1/index.js");
