@@ -1,0 +1,17 @@
+{
+    "welcome_header": "The Welcome Page",
+    "welcome": "Welcome",
+    "first_name": "First Name",
+    "last_name": "Last Name",
+    "full_name": "Full Name",
+    "submit": "Submit",
+
+    "score": "Score: {{score}}",
+    "lives": "{{count}} life remaining",
+    "lives_plural": "{{count}} lives remaining",
+    "lives_indefinite": "a life remaining",
+    "lives_plural_indefinite": "some lives remaining",
+    "friend": "A friend",
+    "friend_male": "A boyfriend",
+    "friend_female": "A girlfriend"
+}
