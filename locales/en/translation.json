@@ -5,6 +5,8 @@
     "last_name": "Last Name",
     "full_name": "Full Name",
     "submit": "Submit",
+    "dbusers": "dbusers",
+    "login": "Login",
 
     "score": "Score: {{score}}",
     "lives": "{{count}} life remaining",

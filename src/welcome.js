@@ -8,7 +8,7 @@ export class Welcome {
   constructor(i18n) {
     this.i18n = i18n;
 
-    //this.heading = this.i18n.tr('welcome_header');
+    this.heading = this.i18n.i18n.tr('welcome_header');
     this.firstName = 'John';
     this.lastName = 'Doe';
     this.previousValue = this.fullName;

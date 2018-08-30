@@ -5,6 +5,8 @@
     "last_name": "Apillidos",
     "full_name": "Nombre Completo",
     "submit": "Enviar",
+    "dbusers": "dbusarios",
+    "login": "Connectate",
 
     "score": "Score: {{score}}",
     "lives": "{{count}} life remaining",

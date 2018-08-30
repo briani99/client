@@ -70,6 +70,7 @@ System.register(['aurelia-framework', 'aurelia-i18n'], function (_export, _conte
 
           this.i18n = i18n;
 
+          this.heading = this.i18n.i18n.tr('welcome_header');
           this.firstName = 'John';
           this.lastName = 'Doe';
           this.previousValue = this.fullName;
