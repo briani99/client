@@ -77,7 +77,11 @@ System.register(['aurelia-framework', 'aurelia-authentication'], function (_expo
                 }
 
                 Login.prototype.login = function login() {
-                    return this.auth.login(this.email, this.password);
+                    var _this = this;
+
+                    return this.auth.login(this.email, this.password).then(function (response) {
+                        _this.auth.config.loginRedirect = _this.auth.config.defaultLoginRedirect;
+                    });
                 };
 
                 Login.prototype.signup = function signup() {
@@ -89,10 +93,11 @@ System.register(['aurelia-framework', 'aurelia-authentication'], function (_expo
                 };
 
                 Login.prototype.authenticate = function authenticate(name) {
-                    var _this = this;
+                    var _this2 = this;
 
                     return this.auth.authenticate(name).then(function (response) {
-                        _this.providers[name] = true;
+                        _this2.providers[name] = true;
+                        _this2.auth.config.loginRedirect = _this2.auth.config.defaultLoginRedirect;
                     });
                 };
 

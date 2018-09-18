@@ -21,6 +21,7 @@ var DevConfig = {
     idTohenName: 'token',
     idTokenRoot: false,
     
+    defaultLoginRedirect: '#/welcome',
     loginRedirect: '#/welcome',
     logoutRedirect: '#/',
     signupRedirect: '#/welcome',

@@ -20,7 +20,10 @@ export class Login {
 
     // login per email+password
     login() {
-    return this.auth.login(this.email, this.password);
+        return this.auth.login(this.email, this.password)
+        .then(response => {
+            this.auth.config.loginRedirect = this.auth.config.defaultLoginRedirect;
+        });
     }
 
     signup() {
@@ -31,11 +34,12 @@ export class Login {
     return this.auth.logout();
     }
 
-     // login with third-party authentication
-     authenticate(name) {
+    // login with third-party authentication
+    authenticate(name) {
         return this.auth.authenticate(name)
         .then(response => {
            this.providers[name] = true;
+           this.auth.config.loginRedirect = this.auth.config.defaultLoginRedirect;
         });
-     }
+    }
 }

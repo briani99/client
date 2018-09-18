@@ -1,7 +1,7 @@
-System.register(['aurelia-authentication'], function (_export, _context) {
+System.register(['AuthNavStep'], function (_export, _context) {
     "use strict";
 
-    var AuthenticateStep, App;
+    var AuthNavStep, App;
 
     function _classCallCheck(instance, Constructor) {
         if (!(instance instanceof Constructor)) {
@@ -10,8 +10,8 @@ System.register(['aurelia-authentication'], function (_export, _context) {
     }
 
     return {
-        setters: [function (_aureliaAuthentication) {
-            AuthenticateStep = _aureliaAuthentication.AuthenticateStep;
+        setters: [function (_AuthNavStep) {
+            AuthNavStep = _AuthNavStep.AuthNavStep;
         }],
         execute: function () {
             _export('App', App = function () {
@@ -22,7 +22,7 @@ System.register(['aurelia-authentication'], function (_export, _context) {
                 App.prototype.configureRouter = function configureRouter(config, router) {
                     config.title = 'Aurelia';
 
-                    config.addPipelineStep('authorize', AuthenticateStep);
+                    config.addPipelineStep('authorize', AuthNavStep);
 
                     config.map([{ route: ['', 'welcome'],
                         name: 'welcome',
@@ -31,6 +31,13 @@ System.register(['aurelia-authentication'], function (_export, _context) {
                         title: 'Welcome',
                         settings: { t: 'welcome' } }, { route: 'dbusers',
                         name: 'dbusers',
+                        moduleId: 'dbusers',
+                        nav: true,
+                        title: 'DB Users',
+                        auth: true,
+                        settings: { t: 'dbusers' }
+                    }, { route: 'dbusers2',
+                        name: 'dbusers2',
                         moduleId: 'dbusers',
                         nav: true,
                         title: 'DB Users',
