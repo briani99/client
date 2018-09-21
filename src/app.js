@@ -23,14 +23,6 @@ export class App {
                 auth: true, 
                 settings: { t:'dbusers' }  
             },
-            {   route: 'dbusers2',
-                name: 'dbusers2',      
-                moduleId: 'dbusers',      
-                nav: true, 
-                title: 'DB Users', 
-                auth: true, 
-                settings: { t:'dbusers' }  
-            },
             {   route: 'login',         
                 name: 'login',        
                 moduleId: 'login',      

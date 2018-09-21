@@ -3,6 +3,7 @@ import {AuthService} from 'aurelia-authentication';
 
 @inject(AuthService)
 export class Login {
+    
     constructor(auth) {
         this.auth = auth;
         this.providers = [];
@@ -20,6 +21,8 @@ export class Login {
 
     // login per email+password
     login() {
+        console.log(this.email);
+        console.log(this.password);
         return this.auth.login(this.email, this.password)
         .then(response => {
             this.auth.config.loginRedirect = this.auth.config.defaultLoginRedirect;

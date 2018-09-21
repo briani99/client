@@ -79,6 +79,8 @@ System.register(['aurelia-framework', 'aurelia-authentication'], function (_expo
                 Login.prototype.login = function login() {
                     var _this = this;
 
+                    console.log(this.email);
+                    console.log(this.password);
                     return this.auth.login(this.email, this.password).then(function (response) {
                         _this.auth.config.loginRedirect = _this.auth.config.defaultLoginRedirect;
                     });
