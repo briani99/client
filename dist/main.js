@@ -1,4 +1,4 @@
-System.register(['bootstrap', './authConfig', 'aurelia-i18n'], function (_export, _context) {
+System.register(['bootstrap', './auth/authConfig', 'aurelia-i18n'], function (_export, _context) {
     "use strict";
 
     var authConfig, I18N, Backend, TCustomAttribute;
@@ -32,17 +32,16 @@ System.register(['bootstrap', './authConfig', 'aurelia-i18n'], function (_export
 
         aurelia.use.plugin('aurelia-animator-css');
 
-
         aurelia.start().then(function () {
-            return aurelia.setRoot();
+            return aurelia.setRoot("shell");
         });
     }
 
     _export('configure', configure);
 
     return {
-        setters: [function (_bootstrap) {}, function (_authConfig) {
-            authConfig = _authConfig.default;
+        setters: [function (_bootstrap) {}, function (_authAuthConfig) {
+            authConfig = _authAuthConfig.default;
         }, function (_aureliaI18n) {
             I18N = _aureliaI18n.I18N;
             Backend = _aureliaI18n.Backend;

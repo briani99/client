@@ -1,5 +1,5 @@
 import 'bootstrap';
-import authConfig from './authConfig';
+import authConfig from './auth/authConfig';
 import {I18N, Backend, TCustomAttribute} from 'aurelia-i18n';
 
 export function configure(aurelia) {
@@ -45,6 +45,6 @@ export function configure(aurelia) {
     //Uncomment the line below to enable animation.
     aurelia.use.plugin('aurelia-animator-css');
     //if the css animator is enabled, add swap-order="after" to all router-view elements
+    aurelia.start().then(() => aurelia.setRoot("shell"));
     
-    aurelia.start().then(() => aurelia.setRoot());
 }
