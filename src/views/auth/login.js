@@ -14,8 +14,6 @@ export class Login {
         return this.auth.authenticated;
     }
 
-    heading  = 'Login Page';
-
     email    = '';
     password = '';
 
@@ -29,12 +27,8 @@ export class Login {
         });
     }
 
-    signup() {
-    return this.auth.signup(this.email, this.email, this.password);
-    }
-
     logout(){
-    return this.auth.logout();
+        return this.auth.logout();
     }
 
     // login with third-party authentication
@@ -45,4 +39,8 @@ export class Login {
            this.auth.config.loginRedirect = this.auth.config.defaultLoginRedirect;
         });
     }
+
+    attached(){
+		$('body').addClass('gray-bg');
+	}
 }
